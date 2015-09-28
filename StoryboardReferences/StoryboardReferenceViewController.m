@@ -10,29 +10,28 @@
 
 @implementation StoryboardReferenceViewController
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    NSAssert(self.storyboardId.length > 0, @"storyboardId is required");
+    NSAssert(self.storyboardName.length > 0, @"storyboardId is required");
 
     NSBundle *bundle = [NSBundle mainBundle];
-    if (self.bundle)
+    if (self.bundleIdentifier)
     {
-        bundle = [NSBundle bundleWithIdentifier:self.bundle];
+        bundle = [NSBundle bundleWithIdentifier:self.bundleIdentifier];
     }
 
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:self.storyboardId
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:self.storyboardName
                                                          bundle:bundle];
-    NSAssert(storyboard != nil, @"Loading storyboard %@ from bundle %@ failed", self.storyboardId, self.bundle);
+    NSAssert(storyboard != nil, @"Loading storyboard %@ from bundle %@ failed", self.storyboardName, self.bundleIdentifier);
 
     UIViewController *viewController;
 
-    if (self.viewControllerId.length > 0)
+    if (self.referencedIdentifier.length > 0)
     {
-        viewController = [storyboard instantiateViewControllerWithIdentifier:self.viewControllerId];
-        NSAssert(viewController != nil, @"Failed to instantiate view controller with identifier", self.viewControllerId);
+        viewController = [storyboard instantiateViewControllerWithIdentifier:self.referencedIdentifier];
+        NSAssert(viewController != nil, @"Failed to instantiate view controller with identifier", self.referencedIdentifier);
     }
     else
     {
@@ -42,7 +41,7 @@
 
     [self addChildViewController:viewController];
     [self.view addSubview:viewController.view];
-    
+
     viewController.view.frame = self.view.frame;
     viewController.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 

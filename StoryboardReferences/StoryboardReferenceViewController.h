@@ -10,8 +10,8 @@
 
 @interface StoryboardReferenceViewController : UIViewController
 
-@property (strong, nonatomic) IBInspectable NSString* storyboardId;
-@property (strong, nonatomic) IBInspectable NSString* viewControllerId;
-@property (strong, nonatomic) IBInspectable NSString* bundle;
+@property (strong, nonatomic) IBInspectable NSString *storyboardName;
+@property (strong, nonatomic) IBInspectable NSString *referencedIdentifier;
+@property (strong, nonatomic) IBInspectable NSString *bundleIdentifier;
 
 @end

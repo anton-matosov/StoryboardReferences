@@ -40,7 +40,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="sK1-KP-rW7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardId" value="MainFirst"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="MainFirst"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEO-Yf-2NH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -63,7 +63,7 @@
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="Gdm-bb-xIX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardId" value="MainSecond"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="MainSecond"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQ6-It-kzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
